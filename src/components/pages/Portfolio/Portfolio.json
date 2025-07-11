@@ -1,0 +1,97 @@
+{
+  "heroSection": {
+    "backgroundImage": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07",
+    "title": "My Portfolio",
+    "subtitle": "A collection of my finest work across different photography styles"
+  },
+  "categories": [
+    { "id": "all", "name": "All Work" },
+    { "id": "wedding", "name": "Wedding" },
+    { "id": "portrait", "name": "Portrait" },
+    { "id": "nature", "name": "Nature" },
+    { "id": "event", "name": "Event" }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "category": "wedding",
+      "title": "Sarah & Michael Wedding",
+      "location": "Bali, Indonesia",
+      "image": "https://images.unsplash.com/photo-1583939003579-730e3918a45a",
+      "likes": 124
+    },
+    {
+      "id": 2,
+      "category": "portrait",
+      "title": "Corporate Headshots",
+      "location": "New York Studio",
+      "image": "https://images.unsplash.com/photo-1554080353-a576cf803bda",
+      "likes": 89
+    },
+    {
+      "id": 3,
+      "category": "nature",
+      "title": "Mountain Sunrise",
+      "location": "Swiss Alps",
+      "image": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+      "likes": 256
+    },
+    {
+      "id": 4,
+      "category": "event",
+      "title": "Music Festival",
+      "location": "Austin, Texas",
+      "image": "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f",
+      "likes": 178
+    },
+    {
+      "id": 5,
+      "category": "wedding",
+      "title": "Traditional Indian Wedding",
+      "location": "Jaipur, India",
+      "image": "https://images.unsplash.com/photo-1523438885200-e635ba2c371e",
+      "likes": 312
+    },
+    {
+      "id": 6,
+      "category": "portrait",
+      "title": "Maternity Session",
+      "location": "Beachside",
+      "image": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+      "likes": 143
+    },
+    {
+      "id": 7,
+      "category": "nature",
+      "title": "Autumn Forest",
+      "location": "Vermont",
+      "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e",
+      "likes": 201
+    },
+    {
+      "id": 8,
+      "category": "event",
+      "title": "Charity Gala",
+      "location": "London",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865",
+      "likes": 97
+    }
+  ],
+  "instagram": {
+    "handle": "@ShutterFrame",
+    "images": [
+      "https://source.unsplash.com/random/300x300/?photography,1",
+      "https://source.unsplash.com/random/300x300/?photography,2",
+      "https://source.unsplash.com/random/300x300/?photography,3",
+      "https://source.unsplash.com/random/300x300/?photography,4",
+      "https://source.unsplash.com/random/300x300/?photography,5",
+      "https://source.unsplash.com/random/300x300/?photography,6"
+    ]
+  },
+  "cta": {
+    "heading": "Ready to Create Beautiful Memories?",
+    "text": "Let's discuss your photography needs",
+    "buttonText": "Book a Session",
+    "buttonLink": "/contact"
+  }
+}

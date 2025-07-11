@@ -1,0 +1,68 @@
+{
+  "heroSection": {
+    "backgroundImage": "https://images.unsplash.com/photo-1554080353-a576cf803bda",
+    "title": "About Me",
+    "subtitle": "The story behind the lens and passion for capturing moments"
+  },
+  "myStory": {
+    "heading": "My Photography Journey",
+    "paragraphs": [
+      "My love for photography began when I received my first camera at age 12. What started as capturing family moments evolved into a lifelong passion for storytelling through images.",
+      "After studying Visual Arts at NYU and assisting renowned photographers, I developed my signature style - a blend of authentic emotion and artistic composition that makes each photograph feel alive."
+    ],
+    "tags": ["Natural Light", "Candid Moments", "Timeless Style"],
+    "ctaText": "View My Work",
+    "ctaLink": "/portfolio",
+    "images": [
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
+      "https://images.unsplash.com/photo-1493863641943-9b68992a8d07",
+      "https://images.unsplash.com/photo-1526666923127-b2970f64b422",
+      "https://images.unsplash.com/photo-1554080353-a576cf803bda"
+    ]
+  },
+  "stats": [
+    {
+      "icon": "calendar",
+      "count": "12+",
+      "label": "Years Experience"
+    },
+    {
+      "icon": "camera",
+      "count": "500+",
+      "label": "Sessions Completed"
+    },
+    {
+      "icon": "award",
+      "count": "25+",
+      "label": "Awards Won"
+    },
+    {
+      "icon": "smile",
+      "count": "100%",
+      "label": "Client Satisfaction"
+    }
+  ],
+  "approach": {
+    "heading": "My Creative Approach",
+    "points": [
+      {
+        "title": "Authentic Connection",
+        "description": "I focus on creating a comfortable environment where your true personality shines through."
+      },
+      {
+        "title": "Artistic Vision",
+        "description": "Every shot is carefully composed with attention to light, angles, and emotion."
+      },
+      {
+        "title": "Timeless Quality",
+        "description": "My editing style ensures your photos remain beautiful for generations."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Let's Create Something Beautiful Together",
+    "text": "I'd love to hear about your photography needs",
+    "buttonText": "Get in Touch",
+    "buttonLink": "/contact"
+  }
+}

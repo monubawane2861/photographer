@@ -1,0 +1,81 @@
+{
+  "heroSection": {
+    "backgroundImage": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07",
+    "title": "Capturing Life's Beautiful Moments",
+    "highlightWord": "Life's",
+    "description": "Professional photography for weddings, portraits, and special events",
+    "buttons": [
+      {
+        "text": "View Portfolio",
+        "link": "/portfolio"
+      },
+      {
+        "text": "Book a Session",
+        "link": "/contact"
+      }
+    ]
+  },
+  "featuredWork": {
+    "title": "Featured Work",
+    "galleryImages": [
+      {
+        "id": 1,
+        "src": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07",
+        "category": "Wedding"
+      },
+      {
+        "id": 2,
+        "src": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+        "category": "Portrait"
+      },
+      {
+        "id": 3,
+        "src": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e",
+        "category": "Nature"
+      },
+      {
+        "id": 4,
+        "src": "https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00",
+        "category": "Event"
+      }
+    ],
+    "viewMoreLink": "/portfolio"
+  },
+  "aboutMe": {
+    "title": "About Me",
+    "description1": "Hi, I'm Sarah, a professional photographer with over 10 years of experience capturing life's most precious moments.",
+    "description2": "My passion is creating timeless images that tell your unique story with authenticity and artistry.",
+    "image": "https://images.unsplash.com/photo-1554080353-a576cf803bda",
+    "experience": {
+      "years": "10+ Years",
+      "label": "Experience"
+    },
+    "readMoreLink": "/about"
+  },
+  "testimonials": {
+    "title": "Client Testimonials",
+    "feedbacks": [
+      {
+        "quote": "Sarah captured our wedding perfectly! The photos are stunning and bring back all the emotions.",
+        "name": "Jessica & Michael",
+        "type": "Wedding Clients"
+      },
+      {
+        "quote": "The family portraits we got were beyond our expectations. Professional and creative!",
+        "name": "The Wilson Family",
+        "type": "Family Portrait"
+      },
+      {
+        "quote": "Our corporate event photos were delivered quickly and looked amazing. Highly recommend!",
+        "name": "TechStart Inc.",
+        "type": "Corporate Client"
+      }
+    ]
+  },
+  "ctaSection": {
+    "title": "Ready to Create Beautiful Memories?",
+    "description": "Let's discuss your photography needs",
+    "buttonText": "Get in Touch",
+    "buttonLink": "/contact"
+  }
+}

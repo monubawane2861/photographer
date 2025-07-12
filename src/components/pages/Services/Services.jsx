@@ -8,70 +8,25 @@ import {
 import { Link } from "react-router-dom";
 import Navbar from "../../common/Navbar/Navbar";
 import Footer from "../../common/Footer/Footer";
+import servicesData from "./Services.json";
+
+const iconMap = {
+  FaCamera: <FaCamera className="text-3xl text-amber-400" />,
+  FaImages: <FaImages className="text-3xl text-amber-400" />,
+  FaMoneyBillWave: <FaMoneyBillWave className="text-3xl text-amber-400" />,
+  FaCalendarAlt: <FaCalendarAlt className="text-3xl text-amber-400" />,
+  FaStar: <FaStar className="text-2xl text-amber-500" />,
+};
 
 const Services = () => {
-  const photographyServices = [
-    {
-      id: 1,
-      title: "Wedding Photography",
-      description:
-        "Capture every precious moment of your special day with our professional wedding photography services.",
-      startingPrice: 1200,
-      features: [
-        "Full-day coverage",
-        "2 photographers",
-        "500+ edited photos",
-        "Online gallery",
-        "Engagement session included",
-      ],
-      icon: <FaCamera className="text-3xl text-amber-400" />,
-    },
-    {
-      id: 2,
-      title: "Portrait Sessions",
-      description:
-        "Beautifully crafted portraits for individuals, couples, and families that tell your unique story.",
-      startingPrice: 300,
-      features: [
-        "1-2 hour session",
-        "3 outfit changes",
-        "50+ edited photos",
-        "Professional lighting",
-        "Indoor/outdoor options",
-      ],
-      icon: <FaImages className="text-3xl text-amber-400" />,
-    },
-    {
-      id: 3,
-      title: "Commercial Photography",
-      description:
-        "High-quality product and business photography to elevate your brand's visual identity.",
-      startingPrice: 500,
-      features: [
-        "Professional lighting setup",
-        "Product styling",
-        "White background options",
-        "Fast turnaround",
-        "E-commerce ready",
-      ],
-      icon: <FaMoneyBillWave className="text-3xl text-amber-400" />,
-    },
-    {
-      id: 4,
-      title: "Event Coverage",
-      description:
-        "Comprehensive documentation of your corporate or social events with professional photography.",
-      startingPrice: 800,
-      features: [
-        "4-8 hour coverage",
-        "Candid moments",
-        "Group photos",
-        "200+ edited photos",
-        "Next-day previews",
-      ],
-      icon: <FaCalendarAlt className="text-3xl text-amber-400" />,
-    },
-  ];
+  const {
+    hero,
+    photographyPackages,
+    whyChooseMe,
+    comparisonTitle,
+    comparisonTable,
+    cta,
+  } = servicesData;
 
   return (
     <>
@@ -81,22 +36,22 @@ const Services = () => {
         <section className="relative py-32 bg-black/50">
           <div className="absolute inset-0 -z-10">
             <img
-              src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07"
+              src={hero.backgroundImage}
               alt="Services Background"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-              My Services
+              {hero.title}
             </h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Professional photography packages tailored to your needs
+              {hero.description}
             </p>
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Services */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -105,14 +60,14 @@ const Services = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {photographyServices.map((service) => (
+              {photographyPackages.map((service) => (
                 <div
                   key={service.id}
                   className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group border border-gray-100"
                 >
                   <div className="p-6 text-center bg-gray-50 group-hover:bg-amber-50 transition-colors">
                     <div className="flex justify-center mb-4">
-                      {service.icon}
+                      {iconMap[service.icon]}
                     </div>
                     <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                     <p className="text-gray-600 mb-4">{service.description}</p>
@@ -128,7 +83,7 @@ const Services = () => {
                       {service.features.map((feature, index) => (
                         <li key={index} className="flex items-start gap-2">
                           <svg
-                            className="w-5 h-5 text-amber-400 mt-0.5 flex-shrink-0"
+                            className="w-5 h-5 text-amber-400 mt-0.5"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -138,7 +93,7 @@ const Services = () => {
                               strokeLinejoin="round"
                               strokeWidth="2"
                               d="M5 13l4 4L19 7"
-                            ></path>
+                            />
                           </svg>
                           <span className="text-gray-700">{feature}</span>
                         </li>
@@ -157,7 +112,7 @@ const Services = () => {
           </div>
         </section>
 
-        {/* Why Choose Me Section */}
+        {/* Why Choose Me */}
         <section className="py-20 px-4 bg-gray-100">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -166,85 +121,53 @@ const Services = () => {
               </h2>
               <div className="w-20 h-1 bg-amber-400 mx-auto"></div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaStar className="text-2xl text-amber-500" />
+              {whyChooseMe.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-8 rounded-lg shadow-md text-center"
+                >
+                  <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    {iconMap[item.icon]}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-3">Premium Quality</h3>
-                <p className="text-gray-600">
-                  Professional-grade equipment and editing to deliver stunning
-                  images that last a lifetime.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaCalendarAlt className="text-2xl text-amber-500" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Flexible Scheduling</h3>
-                <p className="text-gray-600">
-                  Weekend and evening appointments available to accommodate your
-                  busy schedule.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg shadow-md text-center">
-                <div className="bg-amber-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaImages className="text-2xl text-amber-500" />
-                </div>
-                <h3 className="text-xl font-bold mb-3">Fast Delivery</h3>
-                <p className="text-gray-600">
-                  Receive edited, high-resolution photos within 7-10 days after
-                  your session.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Pricing Comparison */}
+        {/* Package Comparison */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Package Comparison</h2>
+              <h2 className="text-3xl font-bold mb-4">{comparisonTitle}</h2>
               <div className="w-20 h-1 bg-amber-400 mx-auto"></div>
             </div>
-
             <div className="overflow-x-auto">
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="p-4 text-left">Features</th>
-                    <th className="p-4 text-center">Portrait</th>
-                    <th className="p-4 text-center">Wedding</th>
-                    <th className="p-4 text-center">Commercial</th>
+                    {comparisonTable.headers.map((head, idx) => (
+                      <th key={idx} className="p-4 text-center">
+                        {head}
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody>
-                  {[
-                    ["Session Duration", "1-2 hours", "Full day", "2-4 hours"],
-                    ["Number of Photos", "50+", "500+", "100+"],
-                    ["Edited Images", "✓", "✓", "✓"],
-                    ["Online Gallery", "✓", "✓", "✓"],
-                    ["Print Release", "✓", "✓", "✓"],
-                    ["Multiple Locations", "-", "✓", "✓"],
-                    ["Second Photographer", "-", "✓", "-"],
-                  ].map(([feature, ...packages], index) => (
+                  {comparisonTable.rows.map((row, rowIndex) => (
                     <tr
-                      key={index}
-                      className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}
+                      key={rowIndex}
+                      className={rowIndex % 2 === 0 ? "bg-white" : "bg-gray-50"}
                     >
-                      <td className="p-4 border-b border-gray-200">
-                        {feature}
-                      </td>
-                      {packages.map((pkg, i) => (
+                      {row.map((cell, i) => (
                         <td
                           key={i}
                           className="p-4 border-b border-gray-200 text-center"
                         >
-                          {pkg}
+                          {cell}
                         </td>
                       ))}
                     </tr>
@@ -255,27 +178,23 @@ const Services = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Call To Action */}
         <section className="py-20 px-4 bg-amber-400 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">
-              Ready to Book Your Session?
-            </h2>
-            <p className="text-xl mb-8">
-              Have questions or need a custom package? Get in touch!
-            </p>
+            <h2 className="text-3xl font-bold mb-6">{cta.title}</h2>
+            <p className="text-xl mb-8">{cta.description}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                to={cta.primaryLink}
                 className="bg-black hover:bg-gray-800 text-white font-semibold px-8 py-4 rounded-full transition-colors"
               >
-                Contact Me
+                {cta.primaryText}
               </Link>
               <Link
-                to="/portfolio"
+                to={cta.secondaryLink}
                 className="border-2 border-black hover:bg-black hover:text-white font-semibold px-8 py-4 rounded-full transition-colors"
               >
-                View Portfolio
+                {cta.secondaryText}
               </Link>
             </div>
           </div>

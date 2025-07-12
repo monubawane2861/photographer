@@ -1,0 +1,57 @@
+{
+  "hero": {
+    "title": "Get In Touch",
+    "description": "Let's create beautiful memories together. Reach out for bookings and inquiries.",
+    "backgroundImage": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07"
+  },
+  "contactForm": {
+    "title": "Send a Message",
+    "fields": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number (Optional)",
+      "service": "Service Interested In",
+      "message": "Your Message"
+    },
+    "placeholder": {
+      "name": "John Doe",
+      "email": "john@example.com",
+      "phone": "+1 234 567 8900",
+      "message": "Tell me about your photography needs..."
+    },
+    "services": [
+      "Select a service",
+      "Wedding Photography",
+      "Portrait Session",
+      "Commercial Photography",
+      "Event Coverage",
+      "Other"
+    ],
+    "buttonText": "Send Message"
+  },
+  "contactInfo": {
+    "title": "Contact Information",
+    "description": "Have questions or ready to book a session? Here's how you can reach me.",
+    "phone": {
+      "label": "Phone",
+      "value": "+1 (234) 567-8900",
+      "note": "Mon-Fri, 9am-6pm"
+    },
+    "email": {
+      "label": "Email",
+      "value": "hello@shutterframe.com",
+      "note": "Response within 24 hours"
+    },
+    "location": {
+      "label": "Studio Location",
+      "address": "123 Photography Ave\nNew York, NY 10001",
+      "note": "By appointment only"
+    },
+    "social": {
+      "instagram": "#",
+      "facebook": "#",
+      "twitter": "#"
+    },
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215209179035!2d-73.987844924239!3d40.74844097138939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689877293976!5m2!1sen!2sus"
+  }
+}

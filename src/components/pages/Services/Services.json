@@ -1,0 +1,103 @@
+{
+  "hero": {
+    "title": "My Services",
+    "description": "Professional photography packages tailored to your needs",
+    "backgroundImage": "https://images.unsplash.com/photo-1493863641943-9b68992a8d07"
+  },
+  "photographyPackages": [
+    {
+      "id": 1,
+      "title": "Wedding Photography",
+      "description": "Capture every precious moment of your special day with our professional wedding photography services.",
+      "startingPrice": 1200,
+      "features": [
+        "Full-day coverage",
+        "2 photographers",
+        "500+ edited photos",
+        "Online gallery",
+        "Engagement session included"
+      ],
+      "icon": "FaCamera"
+    },
+    {
+      "id": 2,
+      "title": "Portrait Sessions",
+      "description": "Beautifully crafted portraits for individuals, couples, and families that tell your unique story.",
+      "startingPrice": 300,
+      "features": [
+        "1-2 hour session",
+        "3 outfit changes",
+        "50+ edited photos",
+        "Professional lighting",
+        "Indoor/outdoor options"
+      ],
+      "icon": "FaImages"
+    },
+    {
+      "id": 3,
+      "title": "Commercial Photography",
+      "description": "High-quality product and business photography to elevate your brand's visual identity.",
+      "startingPrice": 500,
+      "features": [
+        "Professional lighting setup",
+        "Product styling",
+        "White background options",
+        "Fast turnaround",
+        "E-commerce ready"
+      ],
+      "icon": "FaMoneyBillWave"
+    },
+    {
+      "id": 4,
+      "title": "Event Coverage",
+      "description": "Comprehensive documentation of your corporate or social events with professional photography.",
+      "startingPrice": 800,
+      "features": [
+        "4-8 hour coverage",
+        "Candid moments",
+        "Group photos",
+        "200+ edited photos",
+        "Next-day previews"
+      ],
+      "icon": "FaCalendarAlt"
+    }
+  ],
+  "whyChooseMe": [
+    {
+      "title": "Premium Quality",
+      "description": "Professional-grade equipment and editing to deliver stunning images that last a lifetime.",
+      "icon": "FaStar"
+    },
+    {
+      "title": "Flexible Scheduling",
+      "description": "Weekend and evening appointments available to accommodate your busy schedule.",
+      "icon": "FaCalendarAlt"
+    },
+    {
+      "title": "Fast Delivery",
+      "description": "Receive edited, high-resolution photos within 7-10 days after your session.",
+      "icon": "FaImages"
+    }
+  ],
+  "comparisonTitle": "Package Comparison",
+  "comparisonTable": {
+    "headers": ["Features", "Portrait", "Wedding", "Commercial"],
+    "rows": [
+      ["Session Duration", "1-2 hours", "Full day", "2-4 hours"],
+      ["Number of Photos", "50+", "500+", "100+"],
+      ["Edited Images", "✓", "✓", "✓"],
+      ["Online Gallery", "✓", "✓", "✓"],
+      ["Print Release", "✓", "✓", "✓"],
+      ["Multiple Locations", "-", "✓", "✓"],
+      ["Second Photographer", "-", "✓", "-"]
+    ]
+  },
+  "cta": {
+    "title": "Ready to Book Your Session?",
+    "description": "Have questions or need a custom package? Get in touch!",
+    "primaryText": "Contact Me",
+    "primaryLink": "/contact",
+    "secondaryText": "View Portfolio",
+    "secondaryLink": "/portfolio"
+  }
+}

@@ -7,6 +7,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import Footer from "../../common/Footer/Footer";
 import Navbar from "../../common/Navbar/Navbar";
 
@@ -19,9 +20,38 @@ const Contact = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    // Add your form submission logic here
     alert("Thank you for your message! I will get back to you soon.");
   };
+
+  // FAQ toggle state
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "How soon should I book my session?",
+      answer:
+        "I recommend booking at least 2-3 months in advance for weddings and 2-4 weeks for portrait sessions to ensure availability.",
+    },
+    {
+      question: "What's your cancellation policy?",
+      answer:
+        "Cancellations made more than 14 days before the session receive a full refund. Within 14 days, 50% of the deposit is refundable.",
+    },
+    {
+      question: "How long until I receive my photos?",
+      answer:
+        "Portrait sessions are delivered within 2 weeks, weddings within 4-6 weeks. Rush processing is available for an additional fee.",
+    },
+    {
+      question: "Do you travel for photoshoots?",
+      answer:
+        "Yes! I'm available for travel worldwide. Travel fees apply for locations more than 50 miles from my studio.",
+    },
+  ];
 
   return (
     <>
@@ -268,36 +298,20 @@ const Contact = () => {
             </h2>
 
             <div className="space-y-6">
-              {[
-                {
-                  question: "How soon should I book my session?",
-                  answer:
-                    "I recommend booking at least 2-3 months in advance for weddings and 2-4 weeks for portrait sessions to ensure availability.",
-                },
-                {
-                  question: "What's your cancellation policy?",
-                  answer:
-                    "Cancellations made more than 14 days before the session receive a full refund. Within 14 days, 50% of the deposit is refundable.",
-                },
-                {
-                  question: "How long until I receive my photos?",
-                  answer:
-                    "Portrait sessions are delivered within 2 weeks, weddings within 4-6 weeks. Rush processing is available for an additional fee.",
-                },
-                {
-                  question: "Do you travel for photoshoots?",
-                  answer:
-                    "Yes! I'm available for travel worldwide. Travel fees apply for locations more than 50 miles from my studio.",
-                },
-              ].map((item, index) => (
+              {faqs.map((item, index) => (
                 <div
                   key={index}
                   className="border border-gray-200 rounded-lg overflow-hidden"
                 >
-                  <button className="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                  <button
+                    onClick={() => toggleFAQ(index)}
+                    className="w-full flex justify-between items-center p-6 text-left focus:outline-none"
+                  >
                     <h3 className="text-lg font-semibold">{item.question}</h3>
                     <svg
-                      className="w-5 h-5 text-amber-500"
+                      className={`w-5 h-5 text-amber-500 transition-transform duration-300 ${
+                        openIndex === index ? "rotate-180" : ""
+                      }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -310,9 +324,11 @@ const Contact = () => {
                       ></path>
                     </svg>
                   </button>
-                  <div className="px-6 pb-6 pt-0">
-                    <p className="text-gray-600">{item.answer}</p>
-                  </div>
+                  {openIndex === index && (
+                    <div className="px-6 pb-6 pt-0">
+                      <p className="text-gray-600">{item.answer}</p>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

@@ -58,13 +58,7 @@ const NotFound = () => {
             key={item}
             to="/portfolio"
             className="group aspect-square overflow-hidden rounded-lg shadow-md"
-          >
-            <img
-              src={`https://source.unsplash.com/random/300x300/?photography,${item}`}
-              alt={`Photography sample ${item}`}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-          </Link>
+          ></Link>
         ))}
       </div>
     </div>

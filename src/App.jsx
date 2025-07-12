@@ -13,7 +13,7 @@ import Testimonials from "./components/pages/Testimonials/Testimonials";
 import Blog from "./components/pages/Blog/Blog";
 import Contact from "./components/pages/Contact/Contact";
 
-// import NotFound from "./pages/NotFound";
+import NotFound from "./components/pages/NotFound/NotFound";
 // ScrollToTop component to scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -40,7 +40,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
 
-        {/* <Route path="*" element={<NotFound />} />  */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

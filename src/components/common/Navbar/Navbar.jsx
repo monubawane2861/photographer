@@ -32,14 +32,14 @@ const Navbar = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/90 backdrop-blur-sm py-2" : "bg-transparent py-4"
+        scrolled ? " py-2" : " py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group">
           <FaCamera className="text-2xl text-white group-hover:text-amber-400 transition" />
-          <span className="text-white text-xl font-bold group-hover:text-amber-400 transition">
+          <span className="text-white text-xl font-bold group-hover:text-aomber-400 transition">
             Shutter<span className="text-amber-400">Frame</span>
           </span>
         </Link>
